@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="left-side"></div>
+    <main class="right-side">
+        <section class="hero">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</em></p>
+            <br\><br\>
+            <p>You <em>know</em> you want to.</p>
+        </section>
+        <form>
+            <section class="form-main-section">
+                <h1>Let's do this!</h1>
+                <div class="form-main">
+                    <div class="row">
+                        <div class="form-question" data-error="*Please enter a valid first name.">
+                            <label for="first-name">First Name</label>
+                            <input type="text" maxlength="20" pattern="^[a-zA-Z\- ']+$" name="first-name" title="Only use alphabetic characters, apostrophes, hyphens, and spaces.">
+                        </div>
+                        <div class="form-question" data-error="*Please enter a valid last name.">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" maxlength="20" pattern="^[a-zA-Z\- ']+$" name="last-name" title="Only use alphabetic characters, apostrophes, hyphens, and spaces.">
+                        </div>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="form-question" data-error="*Please enter a valid e-mail address.">
+                            <label for="email">Email</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="form-question" data-error="*Please enter a valid phone number.">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" placeholder="012-345-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone-number" title="xxx-xxx-xxxx">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-question" data-error="*Password must be between 5 and 20 characters.">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" minlength="5" maxlength="20" name="password">
+                        </div>
+                        <div class="form-question" data-error="*Password fields must match.">
+                            <label for="password-confirm">Confirm Password</label>
+                            <input type="password" id="password-confirm" minlength="5" maxlength="20">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form-submit-section">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </section>
+    </main>
+</body>
+</html>

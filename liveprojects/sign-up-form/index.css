@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+:root{
+    --right-side-bg: #F8F8F8;
+    --form-main-section-bg: #FFFFFF;
+    --font-accent: #999999;
+    --main-font: 'Roboto', sans-serif;
+    --main-font-color: #222222;
+    --main-green: rgb(55, 110, 55);
+    --active-green: rgb(45, 77, 45);
+    --link-active-green: rgb(137, 177, 137);
+}
+
+a:link, a:visited{
+    color: var(--main-green);
+    text-decoration:none;
+    font-weight:600;
+}
+a:hover{
+    text-decoration:underline;
+    text-decoration-thickness:2px;
+}
+a:active, a:focus{
+    color:var(--link-active-green);
+}
+
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    display:flex;
+    overflow:none;
+    font-family:var(--main-font);
+    color: var(--main-font-color);
+}
+body > .right-side {
+    background-color: var(--right-side-bg);
+    min-height:100svh;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    flex:2;
+    overflow:auto;
+}
+body > .left-side {
+    position:relative;
+    flex:1;
+    overflow:hidden;
+    background-image:url(//unsplash.it/1000/1000);
+    background-size:cover;
+    
+}
+.left-side::after{
+    content:'Website Title';
+    font-family: 'Patua One', cursive;
+    font-size:32px;
+    color:white;
+    background: rgba(0,0,0,0.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    top:15%;
+    width:100%;
+    height:100px;
+    letter-spacing: 2px;
+
+}
+body > .right-side section{
+    padding: 10px 0 20px 20px;
+}
+
+.hero{
+    width:clamp(15ch,70%,65ch);
+    font-size:2rem;
+    font-weight:500;
+}
+
+.form-main-section{
+    background-color: var(--form-main-section-bg);
+    box-shadow:5px 5px 10px #CCCCCC;
+    margin-bottom:20px;
+}
+.form-main{
+    display:flex;
+    flex-direction:column;
+}
+.row{
+    display:flex;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+}
+.form-question{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:10px;
+    max-width:100%;
+}
+label{
+    font-family: 'Roboto Mono', monospace;
+    text-transform:uppercase;
+    font-size:1rem;
+    color: var(--font-accent);
+    font-weight:600;
+    letter-spacing:0.8px;
+}
+input{
+    font-family:  var(--main-font);
+    font-size:1.2rem;
+    font-weight:500;
+    height:20px;
+    padding:10px;
+    width:min(40vw,300px);
+    border:2px solid #E5E7EB;
+    border-radius:6px;
+    margin-right:80px;
+}
+input:focus {
+    box-shadow:5px 5px 5px #EEEEEE;
+    outline-color:blue;
+}
+input:not(:focus):invalid{
+    border:2px solid red;
+}
+
+.form-question:has(input:not(:focus):invalid)::after{
+    padding:0;
+    margin:0;
+    content:attr(data-error);
+    font-size:0.875rem;
+    color:red;
+    
+}
+
+form button{
+    padding:20px 70px;
+    border-radius:10px;
+    border: none;
+    background-color: var(--main-green);
+    font-size:1.25rem;
+    color:#EEEEEE;
+    box-shadow:5px 5px 10px #CCCCCC;
+}
+form button:active, form button:focus{
+    background-color:var(--active-green);
+}
+form button:hover{
+    box-shadow:0px 0px 15px var(--active-green);;
+}
+
+.form-submit-section{
+    font-size:1.2rem;
+}
+
+@media (max-width:1000px) {
+    .left-side{
+        display:none;
+    }
+    input{
+        width:80vw;
+        width:80svw;
+    }
+
+}
