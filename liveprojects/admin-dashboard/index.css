@@ -135,6 +135,8 @@ hr{
     gap:16px;
     margin:0;
     list-style-type:none;
+    align-items:center;
+
 }
 .card__trending-item a{
     display:grid;
