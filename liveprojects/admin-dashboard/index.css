@@ -138,6 +138,9 @@ hr{
     align-items:center;
 
 }
+.card--trending ul{
+    align-self:center;
+}
 .card__trending-item a{
     display:grid;
     grid-auto-flow:column;
@@ -236,6 +239,9 @@ header img{
 .header__profile-picture{
     width:100%;
     align-self:center;
+}
+.header__profile-picture--small{
+    width:80%;
 }
 .header__welcome{
     align-self:center;
