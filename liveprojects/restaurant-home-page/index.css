@@ -196,11 +196,12 @@ h2{
 
 #menu{
     padding-inline:0px;
-    padding-bottom:min(10%,200px);
+    padding-bottom:min(5%,50px);
 }
 #contact{
     text-align:center;
     padding-inline:0px;
+    padding-bottom:min(5%,50px);
 }
 #menu-header, #contact-header{
     color: #f7ebdd;
