@@ -212,7 +212,7 @@ h2{
 }
 #contact-map{
     box-sizing:border-box;
-    width:min(100%,700px);
+    width:min(95vw,700px);
     padding:8px;
 }
 #contact-blurb{
