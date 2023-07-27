@@ -116,6 +116,12 @@ body{
     background-color:#ce5e4f;
     border-radius:5px;
 }
+#menu-action a:hover{
+    background-color:#e8836f;
+}
+#menu-action a:active{
+    background-color:#f0b694;
+}
 #menu-action-overlay h3{
     font-size:1.75rem;
     border-bottom:2px solid white;
